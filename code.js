@@ -16,14 +16,33 @@ function addTodo(event)
 {
     //prevent form from submitting
     event.preventDefault();
+    if(newTask.value===''){
+        alert('Enter a task');
+    }else{
+        btn_colors = {
+            'hi': 'hiP',
+            'med': 'medP',
+            'low': 'lowP'
+          }
+          radios = document.getElementsByName('rgPrior');
+        
+          for (var i = 0, length = radios.length; i < length; i++) {
+            if (radios[i].checked) {
+              btn_selected_color = (btn_colors[radios[i].value]);
+              break;
+            }
+          }
     //create div
     const todoDiv= document.createElement("div");
     todoDiv.classList.add("todo");
     //create li
+   
     const newToDo= document.createElement('li');
     newToDo.innerText=newTask.value;
     newToDo.classList.add('todo-item');
+    newToDo.className=btn_selected_color;
     todoDiv.appendChild(newToDo);
+    
     //TaskDone Button
     const doneButton= document.createElement('button');
     doneButton.innerHTML='<i class="fas fa-check"></i>';
@@ -38,6 +57,7 @@ function addTodo(event)
     oldList.appendChild(todoDiv);
     //clear input value
     newTask.value="";
+    }
 }
 
 function deleteChecked(e){

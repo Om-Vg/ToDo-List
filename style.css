@@ -97,3 +97,14 @@ form button:hover{
     transform: translateY(8rem) rotateZ(20deg);
     
 }
+.hiP {
+    color: red;
+  }
+  
+  .medP {
+    color: blue;
+  }
+  
+  .lowP {
+    color: green;
+  }

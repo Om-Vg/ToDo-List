@@ -108,3 +108,40 @@ form button:hover{
   .lowP {
     color: green;
   }
+
+  select{
+      -moz-appearance: none;
+      -webkit-appearance: none;
+      border: none;
+      outline: none;
+
+  }
+
+  .select{
+      margin: 1rem;
+      position: relative;
+      overflow: hidden;
+  }
+
+  select{
+      color: #E76F51;
+      width: 10rem;
+      cursor: pointer;
+      padding: 1rem;
+  }
+
+  .select::after{
+      content: "\25BC";
+      position: absolute;
+      background: #2A9D8F;
+      top: 0;
+      right:0;
+      padding: 1rem;
+      pointer-events: none;
+      transition: all 0.3s ease;
+  }
+
+  .select:hover::after{
+      background: white;
+      color: #E76F51;
+  }

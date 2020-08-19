@@ -1,147 +1,157 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-body{
-    background-image: linear-gradient(90deg,#AACFCF,#ffe0ac);
-    
-    color: #000000;
-    
-    font-family: 'MuseoModerno', cursive;
-    text-align: center;
-    font-size: xx-large;
-    
-   
+body {
+  background-image: linear-gradient(90deg, #aacfcf, #ffe0ac);
+
+  color: #000000;
+
+  font-family: "MuseoModerno", cursive;
+  text-align: center;
+  font-size: xx-large;
 }
 
-
-form{
-    min-height: 20vh;
-    display: flex;
-    justify-content: center; 
-    align-items: center;
-    
+form {
+  min-height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 form input,
-form button{
-    padding: 0.5rem;
-    font-size: 1.8rem;
-    font-family: 'Franklin Gothic Medium';
-    border: none;
-    background: white;
+form button {
+  padding: 0.5rem;
+  font-size: 1.8rem;
+  font-family: "Franklin Gothic Medium";
+  border: none;
+  background: white;
 }
 
-form button{
-   color: #2A9D8F;
-   background: #FFFFFF;
-   cursor: pointer;
-   transition: all 0.3s ease; 
+form button {
+  color: #2a9d8f;
+  background: #ffffff;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
-form button:hover{
-    background: #2A9D8F;
-    color: white;
-}
-
-.container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
+form button:hover {
+  background: #2a9d8f;
+  color: white;
 }
 
-.Lists{
-    min-width: 30%;
-    list-style: none;
-    padding: .5;
-}
-.todo{
-    margin:.5rem ;
-    background: white;
-    color: black;
-    font-size: 1.5rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: all 0.5s ease;
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.todo li{
-    flex:1;
+.Lists {
+  min-width: 30%;
+  list-style: none;
+  padding: 0.5;
 }
-.Delete-Btn, .Completed-Btn{
-    background: #2A9D8F;
-    color: white;
-    border: none;
-    padding: 1rem;
-    cursor: pointer;
-    font-size: 1rem;
-}
-.Completed-Btn{
-    background: #E76F51;
+.todo {
+  margin: 0.5rem;
+  background: white;
+  color: black;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.5s ease;
 }
 
+.todo li {
+  flex: 1;
+}
+.Delete-Btn,
+.Completed-Btn,
+.Star-Btn {
+  background: #2a9d8f;
+  color: white;
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+}
+.Completed-Btn {
+  background: #e76f51;
+}
+.fa-star,
 .fa-trash,
-.fa-check{
-    pointer-events: none;
+.fa-check {
+  pointer-events: none;
 }
 
-.completed{
-    text-decoration: line-through;
-    opacity: 0.5;
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
 }
 
-.fall{
-    opacity:0;
-    transform: translateY(8rem) rotateZ(20deg);
-    
+.fall {
+  opacity: 0;
+  transform: translateY(8rem) rotateZ(20deg);
 }
-.hiP {
-    color: red;
-  }
+
+.star {
+  color: #e76f51;
+}
+/* .hiP {
+  color: red;
+}
+
+.medP {
+  color: blue;
+}
+
+.lowP {
+  color: green;
+} */
+
+select {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  border: none;
+  outline: none;
+}
+
+.select {
+  margin: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+select {
+  font-weight: 800;
+  color: gray;
+  width: 10rem;
+  cursor: pointer;
+  padding: 1rem;
+}
+
+.select::after {
+  content: "\25BC";
+  position: absolute;
+  background: #2a9d8f;
+  top: 0;
+  right: -1rem;
+  padding: 1rem;
+  padding-top: 5px;
+  margin: 7px;
+  pointer-events: none;
+  transition: all 0.3s ease;
   
-  .medP {
-    color: blue;
-  }
-  
-  .lowP {
-    color: green;
-  }
+}
 
-  select{
-      -moz-appearance: none;
-      -webkit-appearance: none;
-      border: none;
-      outline: none;
+.select:hover::after {
+  background: white;
+  color: #e76f51;
+}
 
-  }
-
-  .select{
-      margin: 1rem;
-      position: relative;
-      overflow: hidden;
-  }
-
-  select{
-      color: #E76F51;
-      width: 10rem;
-      cursor: pointer;
-      padding: 1rem;
-  }
-
-  .select::after{
-      content: "\25BC";
-      position: absolute;
-      background: #2A9D8F;
-      top: 0;
-      right:0;
-      padding: 1rem;
-      pointer-events: none;
-      transition: all 0.3s ease;
-  }
-
-  .select:hover::after{
-      background: white;
-      color: #E76F51;
-  }
+.sortBtn{
+ border-radius: 4px;
+ padding:10px;
+ margin:3px;
+ color:gray;
+}
